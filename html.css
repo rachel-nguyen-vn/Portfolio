@@ -1,0 +1,47 @@
+/* for desktop devices */
+@media screen and (min-width:960px){
+    body{
+        background-color: antiquewhite;
+        color:black;
+    }
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        font-size: 40px;
+    }
+
+    a{
+        text-decoration: none;
+        cursor:pointer;
+    }
+
+    a:visited{
+        color: black;
+    }
+
+    a:hover{
+        color: rgb(131, 131, 128);
+    }
+
+    h2{
+        font-size: 70px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    h3{
+        font-size: 50px;
+    }
+
+    main{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* style for moble devices */
+@media screen and (max-width:480px)
