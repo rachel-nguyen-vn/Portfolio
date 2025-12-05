@@ -1,9 +1,54 @@
-/* for desktop devices */
-@media screen and (min-width:960px){
-    body{
+body{
         background-color: antiquewhite;
         color:black;
     }
+
+/* style for moble devices */
+@media screen and (max-width:480px){
+    main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title{
+        font-size: 18px;
+        margin-top: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    h3{
+        margin: 0;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    img{
+        width: 300px;
+        height: 450px;
+        border-radius: 5px;
+    }
+}
+
+/* for desktop devices */
+@media screen and (min-width:960px){
 
     ul{
         display: flex;
@@ -22,17 +67,20 @@
     }
 
     a:hover{
-        color: rgb(131, 131, 128);
+        color: #896C6C;
     }
 
     h2{
         font-size: 70px;
         grid-column: 2/3;
         grid-row: 1/2;
+        margin: 10px;
     }
 
     h3{
-        font-size: 50px;
+        font-size: 70px;
+        margin: 10px;
+        letter-spacing: 10px;
     }
 
     main{
@@ -41,7 +89,15 @@
         justify-content: center;
         align-items: center;
     }
+
+    .title{
+        margin: 20px 10px;
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+
+    img{
+        border-radius: 10px;
+    }
 }
 
-/* style for moble devices */
-@media screen and (max-width:480px)

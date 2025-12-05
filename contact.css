@@ -1,0 +1,52 @@
+/* for moble */
+@media screen and (max-width:480px){
+    body{
+        background-color: #D1BB9E;
+        margin: 10px 20px;
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "header header" 
+            "img name"
+            "img title"
+            "img mail"
+            "img phone"
+            "img address";
+    }
+
+    .header{
+        grid-area: header;
+        display: flex;
+
+    }
+
+    .name{
+        grid-area: name;
+    }
+
+    .title{
+        grid-area: title;
+    }
+    
+    .mail{
+        grid-area: mail;
+        display: flex;
+    }
+
+    .phone{
+        grid-area: phone;
+        display: flex;
+    }
+
+    .address{
+        grid-area: address;
+        display: flex;
+    }
+
+    img{
+        grid-area: img;
+        width: 190px;
+        height: 285px;
+    }
+}
+    
