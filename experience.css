@@ -1,26 +1,51 @@
+body {
+    background-color: #D1BB9E;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #896C6C;
+}
+
 /* for moble */
-@media screen and (max-width: 480px){
-    body{
-        background-color: #D1BB9E;
-        display:grid;
+@media screen and (max-width: 480px) {
+    body {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         margin: 20px 20px;
     }
 
-    .desktop_only{
+    .desktop_only {
         display: none;
     }
-    h2{
+
+    h2 {
         text-align: center;
+        margin-right: 60px;
     }
 
-    .title1{
+    .header {
         grid-column: 1/3;
-      
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .discription{
+    .header i {
+        font-size: 30px;
+    }
+
+    .discription {
         background-color: #EAD8C0;
         padding: 5px 15px;
         margin-bottom: 0;
@@ -31,55 +56,65 @@
     }
 
     /* job part */
-    .ex{
+    .ex {
         background-color: #EAD8C0;
         padding: 10px 15px;
         border-radius: 5px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: repeat(5 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "crew crew . . . "
             ". teach teach . . "
             ". . ta ta ."
             ". . . tutor tutor";
     }
-    .crew{
+
+    .crew {
         grid-area: crew;
     }
 
-    .teach{
+    .teach {
         grid-area: teach;
     }
-    .ta{
+
+    .ta {
         grid-area: ta;
     }
-    .tutor{
+
+    .tutor {
         grid-area: tutor;
     }
 
-    .crew, .teach, .ta, .tutor{
+    .crew,
+    .teach,
+    .ta,
+    .tutor {
         background-color: #D7C097;
         margin-bottom: 15px;
         padding-left: 10px;
         border-radius: 5px;
     }
 
-    h4, .ex p{
+    h4,
+    .ex p {
         text-indent: 10px;
         font-size: smaller;
     }
 
-    .ex h3, .ex h4, .ex p{
+    .ex h3,
+    .ex h4,
+    .ex p {
         margin: 10px 0;
     }
 
     /* skills part */
-    .title2{
+    .title2 {
         grid-column: 1/3;
-        
+
     }
-    .skills{
+
+    .skills {
         background-color: #EAD8C0;
         padding: 15px 10px;
         grid-column: 1/3;
@@ -90,34 +125,33 @@
         border-radius: 5px;
     }
 
-    .skills h2{
+    .skills h2 {
         background-color: #D1BB9E;
     }
 
-    .skills h3{
+    .skills h3 {
         font-size: 25px;
         text-align: center;
         margin-bottom: 10px;
     }
 
-    .skills p{
+    .skills p {
         font-size: 15px;
     }
 
-    .skills section{
-        background-color: #D7C097 ;
+    .skills section {
+        background-color: #D7C097;
         padding-left: 7px;
         letter-spacing: 1px;
     }
 }
 
 /* for desktop */
-@media screen  and (min-width: 960px){
-    body{
-        background-color: #D1BB9E;
-        display:grid;
+@media screen and (min-width: 960px) {
+    body {
+        display: grid;
         grid-template-columns: 1fr 1.5fr 1.5fr;
-        grid-template-areas: 
+        grid-template-areas:
             "title1 title1 title1"
             "photo ex ex"
             "photo ex ex"
@@ -126,26 +160,33 @@
             "photo title2 title2"
             "photo skills skills";
         gap: 20px;
-    
+
     }
 
-    .discription{
+    .discription {
         display: none;
     }
 
-    h2{
+    h2 {
         text-align: center;
         font-size: 40px;
-        margin-bottom: 0;
+        margin: 20px 380px 0 0;
     }
 
-    .title1{
+    .header {
         grid-area: title1;
         margin-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header i {
+        font-size: 40px;
     }
 
     /* job part */
-    .ex{
+    .ex {
         grid-area: ex;
         background-color: #EAD8C0;
         padding: 10px;
@@ -154,42 +195,43 @@
         border-radius: 10px;
     }
 
-    .ex h3{
+    .ex h3 {
         font-size: 30px;
         margin-bottom: 0;
     }
 
-    .ex h4{
+    .ex h4 {
         font-size: 25px;
         margin-bottom: 0;
         margin-top: 15px;
     }
 
-    .ex p{
+    .ex p {
         font-size: 20px;
         margin-bottom: 0;
         line-height: 1.5;
     }
 
-    .teach section{
+    .teach section {
         display: flex;
         justify-content: space-between;
     }
-    
-    .msdung{
+
+    .msdung {
         padding-right: 120px;
     }
 
     /* skills part */
-    .title2{
+    .title2 {
         grid-area: title2;
         margin: 0;
     }
-    .skills{
+
+    .skills {
         grid-area: skills;
         background-color: #EAD8C0;
         padding: 0 20px 20px 20px;
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         margin-right: 30px;
@@ -204,19 +246,20 @@
         font-size: 20px;
     }
 
-    .skills h3{
+    .skills h3 {
         text-align: center;
         font-size: 30px;
     }
 
-    .box{
+    .box {
         accent-color: #FFF2E1;
         width: 20px;
         height: 20px;
 
     }
+
     /* photo part */
-    .photo{
+    .photo {
         grid-area: photo;
         display: flex;
         flex-direction: column;
@@ -224,15 +267,15 @@
         margin-left: 30px;
     }
 
-    .pic1{
+    .pic1 {
         width: 500px;
         height: 700px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         border-radius: 10px;
     }
 
     .pic2 {
-        height: 800px;
+        height: 650px;
         width: 500px;
         border-radius: 10px;
     }

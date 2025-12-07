@@ -1,85 +1,125 @@
+body {
+    background-color: #D1BB9E;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #896C6C;
+}
+
 /* for mobile devices */
 @media screen and (max-width:480px) {
-    body{
-        background-color: #D1BB9E;
+    body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             "introduce introduce introduce"
             "education education photo"
             "education education photo";
-        margin: 0 15px;
+        margin: 15px;
     }
 
-    .introduce{
+    .introduce {
         grid-area: introduce;
     }
-    .introduce p{
+
+    .introduce p {
         text-indent: 10px;
+        line-height: 1.5;
     }
 
-    .education{
-        grid-area: education;
+    .introduce div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .photo{
+
+    div i {
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+
+    div h2 {
+        margin: 0;
+        margin-right: 125px;
+    }
+
+    .education {
+        grid-area: education;
+        line-height: 2.2;
+    }
+
+    .photo {
         grid-area: photo;
     }
 
-    .pic1{
+    .pic1 {
         width: 200px;
         height: 300px;
     }
 
-    h2{
+    h2 {
         margin-bottom: 0;
     }
 
-    h3, p{
+    h3,
+    p {
         margin: 10px 0;
     }
 
-    .education h2{
+    .education h2 {
         margin: 0;
     }
 
-    .education, .photo{
+    .education,
+    .photo {
         margin: 20px 0;
     }
 
-    .photo h3, .photo h4{
+    .photo h3,
+    .photo h4 {
         text-align: center;
     }
-    
-    .photo h4{
+
+    .photo h4 {
         margin-top: 0;
     }
 }
-    
 
 /* for desktop devices */
-@media screen and (min-width:960px){
-    body{
-        background-color: #D1BB9E;
+@media screen and (min-width:960px) {
+    body {
         display: grid;
         grid-template-columns: repeat(2 1fr);
         grid-template-rows: repeat(2 1fr);
     }
-    h2{
+
+    h2 {
         font-size: 50px;
     }
 
-    h3{
+    h3 {
         font-size: 30px;
     }
+
     /* intro part */
-    .introduce{
+    .introduce {
         grid-column: 1/2;
         grid-row: 1;
         background-color: #EAD8C0;
         padding: 10px 30px;
         margin: 20px;
     }
-    
+
     .introduce p {
         font-size: 25px;
         margin: 0;
@@ -87,8 +127,20 @@
         text-indent: 20px;
     }
 
+    .introduce div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-right: 270px;
+    }
+
+    div i {
+        font-size: 50px;
+    }
+
     /* edu part */
-    .education{
+    .education {
         grid-column: 1/3;
         grid-row: 2;
         display: flex;
@@ -99,36 +151,36 @@
         align-items: center;
     }
 
-    .education h2{
+    .education h2 {
         margin: 20px 20px 0;
     }
 
-    .education p{
+    .education p {
         font-size: 25px;
     }
 
-    div{
+    div {
         display: flex;
         justify-content: space-around;
         gap: 300px;
     }
 
     /* pic part */
-    .photo{
+    .photo {
         grid-column: 2/3;
         grid-row: 1;
-        padding: 0 ;
+        padding: 0;
         margin: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .photo h3{
+    .photo h3 {
         font-size: 25px;
     }
 
-    .photo h4{
+    .photo h4 {
         font-size: 20px;
         margin: 0;
     }
